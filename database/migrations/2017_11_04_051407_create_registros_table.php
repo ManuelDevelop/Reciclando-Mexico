@@ -16,6 +16,10 @@ class CreateRegistrosTable extends Migration
         Schema::create('registros', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
+            $table->real('kilometros');
+            $table->integer('gasolina');
+            $table->real('kilos');
+            $table->integer('foto');
         });
     }
 
