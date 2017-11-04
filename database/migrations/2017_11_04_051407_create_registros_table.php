@@ -16,10 +16,11 @@ class CreateRegistrosTable extends Migration
         Schema::create('registros', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->real('kilometros');
+            $table->float('kilometros');
             $table->integer('gasolina');
-            $table->real('kilos');
-            $table->integer('foto');
+            $table->float('kilos');
+            $table->integer('foto')->unsigned();
+            $table->foreign('foto')->references('id')->on('fotos');
         });
     }
 

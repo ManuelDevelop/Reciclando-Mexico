@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use App\Http\Controllers;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,23 +18,35 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+//Rutas para la tabla de Logins
 //retorna el usuario si esta registrado
-Route::post('log',function(){
-	return response(['elemento1','elemento2'],200);
-});
-//ingresa la imagen
-Route::post('imagen',function(){
-	return response(['elemento3','elemento4'],200);
-});
-//obtiene la imagen
-Route::get('imagen/{id}',function(){
-	return response(['elemento5','elemento6'],200);
-});
-//ingresa el registro
-Route::post('registro',function(){
-	return response(['elemento7','elemento8'],200);
-});
-//obtiene el registro
-Route::get('registro/{id}',function(){
-	return response(['elemento9','elemento10'],200);
-});
+Route::post('log','LoginController@index');
+//obtiene la imagen por id
+Route::get('log/{id}','LoginController@show');
+//Actualiza el registro por id
+Route::put('log/{id}','LoginController@edit');
+//Elimina el registro por id
+Route::delete('log/{id}','LoginController@destroy');
+
+
+
+//Rutas para la tabla de Imagenes
+//ingresa una nueva imagen
+Route::post('imagen','FotoController@store');
+//obtiene la imagen por id
+Route::get('imagen/{id}','FotoController@show');
+//Actualiza el registro por id
+Route::put('imagen/{id}','FotoController@edit');
+//Elimina el registro por id
+Route::delete('imagen/{id}','FotoController@destroy');
+
+
+//rutas para la tabla de Registros
+//ingresa un nuevo registro
+Route::post('registro','RegistroController@store');
+//obtiene el registro por id
+Route::get('registro/{id}','RegistroController@show');
+//Actualiza el registro por id
+Route::put('registro/{id}','RegistroController@edit');
+//Elimina el registro por id
+Route::delete('registro/{id}','RegistroController@destroy');
