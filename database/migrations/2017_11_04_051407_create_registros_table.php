@@ -19,8 +19,6 @@ class CreateRegistrosTable extends Migration
             $table->float('kilometros');
             $table->integer('gasolina');
             $table->float('kilos');
-            $table->integer('foto')->unsigned();
-            $table->foreign('foto')->references('id')->on('fotos');
         });
     }
 

@@ -20,7 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 //Rutas para la tabla de Logins
 //retorna el usuario si esta registrado
-Route::post('log','LoginController@index');
+Route::post('log','LoginController@store');
 //obtiene la imagen por id
 Route::get('log/{id}','LoginController@show');
 //Actualiza el registro por id

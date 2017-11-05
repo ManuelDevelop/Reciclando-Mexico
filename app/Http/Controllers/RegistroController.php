@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use App\Registro;
+use App\Foto;
 
 class RegistroController extends Controller
 {
@@ -37,8 +38,17 @@ class RegistroController extends Controller
      */
     public function store(Request $request)
     {
-        $registro=Registro::create($request->all());
-        return response()->json($registro,201);
+        $kilometros=$request->input('kilometros');
+        $gasolina=$request->input('gasolina');
+        $kilos=$request->input('kilos');
+        $foto=$request->input('foto');
+        if(!kilometros || !gasolina || !kilos || !foto){
+            return response()->json(['errors'=>array(['code'=>422,'message'=>'Faltan datos'])],422);
+        }
+        else{
+            $registro=Registro::create($request->all());
+            return response()->json(['status'=>'ok','data'=>$registro],201);
+        }
     }
 
     /**
@@ -89,6 +99,13 @@ class RegistroController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $registro=Registro::find($id);
+        if(!$registro){
+            return response()->json(['errors'=>array(['code'=>404,'message'=>'No se encuentra'])],404);
+        }
+        else{
+            $registro->delete();
+            return response()->json(['status'=>'ok','data'=>$registro,'message'=>'se elimino el registro'],204);
+        }
     }
 }

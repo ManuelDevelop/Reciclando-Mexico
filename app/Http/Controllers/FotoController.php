@@ -89,6 +89,13 @@ class FotoController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $foto=Foto::find($id);
+        if(!$foto){
+            return response()->json(['errors'=>array(['code'=>404,'message'=>'No se encuentra'])],404);
+        }
+        else{
+            $foto->delete();
+            return response()->json(['status'=>'ok','data'=>$foto,'message'=>'se elimino el registro'],204);
+        }
     }
 }

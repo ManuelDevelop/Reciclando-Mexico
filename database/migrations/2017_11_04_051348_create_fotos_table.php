@@ -17,6 +17,8 @@ class CreateFotosTable extends Migration
             $table->increments('id');
             $table->timestamps();
             $table->string('picture');
+            $table->integer('registro_id')->unsigned();
+            $table->foreign('registro_id')->references('id')->on('registros');
         });
     }
 

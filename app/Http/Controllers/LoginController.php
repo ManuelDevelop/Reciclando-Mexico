@@ -37,8 +37,15 @@ class LoginController extends Controller
      */
     public function store(Request $request)
     {
-        $login=Login::create($request->all());
-        return response()->json($login,201);
+        $alias=$request->input('alias');
+        $pass=$request->input('pass');
+        if(!$alias || !$pass){
+            return response()->json(['errors'=>array(['code'=>422,'message'=>'Faltan datos'])],422);
+        }
+        else{
+            $login=Login::create($request->all());
+            return response()->json(['status'=>'ok','data'=>$login],201);
+        }
     }
 
     /**
@@ -89,6 +96,13 @@ class LoginController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $login=Login::find($id);
+        if(!$login){
+            return response()->json(['errors'=>array(['code'=>404,'message'=>'No se encuentra'])],404);
+        }
+        else{
+            $login->delete();
+            return response()->json(['status'=>'ok','data'=>$login,'message'=>'se elimino el registro'],204);
+        }
     }
 }
