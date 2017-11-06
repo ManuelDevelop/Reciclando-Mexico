@@ -41,8 +41,9 @@ class RegistroController extends Controller
         $kilometros=$request->input('kilometros');
         $gasolina=$request->input('gasolina');
         $kilos=$request->input('kilos');
-        $foto=$request->input('foto');
-        if(!kilometros || !gasolina || !kilos || !foto){
+        $login_id=$request->input('login_id');
+
+        if(!$kilometros || !$gasolina || !$kilos || !$login_id){
             return response()->json(['errors'=>array(['code'=>422,'message'=>'Faltan datos'])],422);
         }
         else{

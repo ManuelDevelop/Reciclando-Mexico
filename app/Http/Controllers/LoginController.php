@@ -39,6 +39,7 @@ class LoginController extends Controller
     {
         $alias=$request->input('alias');
         $pass=$request->input('pass');
+
         if(!$alias || !$pass){
             return response()->json(['errors'=>array(['code'=>422,'message'=>'Faltan datos'])],422);
         }

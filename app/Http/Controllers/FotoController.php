@@ -37,8 +37,16 @@ class FotoController extends Controller
      */
     public function store(Request $request)
     {
-        $foto=Foto::create($request->all());
-        return response()->json($foto,201);
+        $picture=$request->input('picture');
+        $registro_id=$request->input('registro_id');
+
+        if(!$picture || !$registro_id){
+            return response()->json(['errors'=>array(['code'=>422,'message'=>'Faltan datos'])],422);
+        }
+        else{
+            $foto=Foto::create($request->all());
+            return response()->json(['status'=>'ok','data'=>$foto],201);
+        }
     }
 
     /**

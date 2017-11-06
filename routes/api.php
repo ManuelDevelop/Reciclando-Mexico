@@ -29,9 +29,6 @@ Route::put('log/{id}','LoginController@edit');
 Route::delete('log/{id}','LoginController@destroy');
 
 
-<<<<<<< HEAD
-=======
-
 //Rutas para la tabla de Imagenes
 //ingresa una nueva imagen
 Route::post('imagen','FotoController@store');
@@ -43,7 +40,6 @@ Route::put('imagen/{id}','FotoController@edit');
 Route::delete('imagen/{id}','FotoController@destroy');
 
 
->>>>>>> parent of 39417dd... API-REST v8
 //rutas para la tabla de Registros
 //ingresa un nuevo registro
 Route::post('registro','RegistroController@store');

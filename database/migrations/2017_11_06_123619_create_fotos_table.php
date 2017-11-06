@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateLoginRegistrosTable extends Migration
+class CreateFotosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class CreateLoginRegistrosTable extends Migration
      */
     public function up()
     {
-        Schema::create('login_registros', function (Blueprint $table) {
+        Schema::create('fotos', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('picture');
+            $table->string('registro_id');
             $table->timestamps();
         });
     }
@@ -26,6 +28,6 @@ class CreateLoginRegistrosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('login_registros');
+        Schema::dropIfExists('fotos');
     }
 }

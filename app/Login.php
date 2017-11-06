@@ -10,7 +10,7 @@ class Login extends Model
     protected $fillable=array('alias','pass');
     protected $hidden=['created_at','updated_at'];
 
-    public function loginregistro(){
-    	return $this->hasMany('App\LoginRegistro');
+    public function registro(){
+    	return $this->hasMany('App\Registro');
     }
 }
