@@ -181,7 +181,6 @@ return [
          *  Providers Personales
          */
         Collective\Html\HtmlServiceProvider::class,
-        Laracasts\Flash\FlashServiceProvider::class,
 
     ],
 
