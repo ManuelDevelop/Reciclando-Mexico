@@ -29,6 +29,11 @@ Route::group([],function(){
 Route::group([],function(){
 	Route::resource('fot','FotoController');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
