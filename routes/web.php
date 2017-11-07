@@ -14,3 +14,18 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+//Las rutas web son las que utiliza para moverse dentro de la aplicaion del propio framework si queremos ocupar el framewor se utiliza el archivo api.php para que sean consumidas por otra aplicaion
+//
+
+Route::group([],function(){
+	Route::resource('log','LoginController');
+});
+
+Route::group([],function(){
+	Route::resource('reg','RegistroController');
+});
+
+Route::group([],function(){
+	Route::resource('fot','FotoController');
+});

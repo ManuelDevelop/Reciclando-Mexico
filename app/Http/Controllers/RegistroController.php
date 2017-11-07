@@ -27,7 +27,7 @@ class RegistroController extends Controller
      */
     public function create()
     {
-        //
+        return view('viewReg.crear');
     }
 
     /**
