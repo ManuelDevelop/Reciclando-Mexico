@@ -19,20 +19,16 @@ Route::get('/', function () {
 //
 
 Route::group([],function(){
-	Route::resource('log','LoginController');
+	Route::resource('/log','LoginController');
 });
 
 Route::group([],function(){
-	Route::resource('reg','RegistroController');
+	Route::resource('/reg','RegistroController');
 });
 
 Route::group([],function(){
-	Route::resource('fot','FotoController');
+	Route::resource('/fot','FotoController');
 });
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 

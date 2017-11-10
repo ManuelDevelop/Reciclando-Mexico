@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use App\Registro;
-use App\Foto;
+use Laracasts\Flash\Flash;
 
 class RegistroController extends Controller
 {
@@ -17,7 +17,8 @@ class RegistroController extends Controller
      */
     public function index()
     {
-        return response()->json(Registro::all(),201);
+        $registros=Registro::orderBy('id','ASC')->paginate(10);
+        return view('viewReg.mostrar')->with('listreg',$registros);
     }
 
     /**
@@ -41,14 +42,17 @@ class RegistroController extends Controller
         $kilometros=$request->input('kilometros');
         $gasolina=$request->input('gasolina');
         $kilos=$request->input('kilos');
-        $login_id=$request->input('login_id');
-
+        //$login_id=$request->input('login_id');
+        $login_id=1;
         if(!$kilometros || !$gasolina || !$kilos || !$login_id){
-            return response()->json(['errors'=>array(['code'=>422,'message'=>'Faltan datos'])],422);
+            dd("Faltan Datos");
         }
         else{
-            $registro=Registro::create($request->all());
-            return response()->json(['status'=>'ok','data'=>$registro],201);
+            $registro=new Registro($request->all());
+            $registro->login_id=1;
+            $registro->save();
+            Flash::success("se creo el nuevo registro");
+            return redirect()->route('reg.index');
         }
     }
 
