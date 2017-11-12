@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use App\Registro;
 use Laracasts\Flash\Flash;
+use Illuminate\Support\Facades\Auth;
 
 class RegistroController extends Controller
 {
@@ -17,7 +18,8 @@ class RegistroController extends Controller
      */
     public function index()
     {
-        $registros=Registro::orderBy('id','ASC')->paginate(10);
+        $id=Auth::user()->id;
+        $registros=Registro::where("login_id","=",$id)->orderBy('id','ASC')->paginate(10);
         return view('viewReg.mostrar')->with('listreg',$registros);
     }
 
@@ -42,14 +44,13 @@ class RegistroController extends Controller
         $kilometros=$request->input('kilometros');
         $gasolina=$request->input('gasolina');
         $kilos=$request->input('kilos');
-        //$login_id=$request->input('login_id');
-        $login_id=1;
-        if(!$kilometros || !$gasolina || !$kilos || !$login_id){
-            dd("Faltan Datos");
+        if(!$kilometros || !$gasolina || !$kilos){
+            Flash::warning('Faltan Datos');
+            return redirect()->route('reg.index');
         }
         else{
             $registro=new Registro($request->all());
-            $registro->login_id=1;
+            $registro->login_id=Auth::user()->id;
             $registro->save();
             Flash::success("se creo el nuevo registro");
             return redirect()->route('reg.index');
@@ -81,7 +82,13 @@ class RegistroController extends Controller
      */
     public function edit($id)
     {
-        //
+        $reg=Registro::find($id);
+        if(!$reg){
+            Flash::warning("Ese registro no existe");
+        }
+        else{
+            return view('viewReg.editar')->with('reg',$reg);
+        }
     }
 
     /**
@@ -93,7 +100,16 @@ class RegistroController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $reg=Registro::find($id);
+        if(!$reg){
+            Flash::warning("Ese registro no existe");
+        }
+        else{
+            Flash::success("Actualizacion del registro Exitosa");
+            $reg->fill($request->all());
+            $reg->save();
+            return redirect()->route('reg.index');
+        }
     }
 
     /**
@@ -106,11 +122,12 @@ class RegistroController extends Controller
     {
         $registro=Registro::find($id);
         if(!$registro){
-            return response()->json(['errors'=>array(['code'=>404,'message'=>'No se encuentra'])],404);
+            Flash::warning("Ese registro no existe");
         }
         else{
             $registro->delete();
-            return response()->json(['status'=>'ok','data'=>$registro,'message'=>'se elimino el registro'],204);
+            Flash::success('El registro se elimino de Manera Exitosa');
+            return redirect()->route('reg.index');
         }
     }
 }

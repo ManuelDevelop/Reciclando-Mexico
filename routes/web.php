@@ -22,8 +22,12 @@ Route::group([],function(){
 	Route::resource('/log','LoginController');
 });
 
-Route::group([],function(){
+Route::group(['middleware'=>'auth'],function(){
 	Route::resource('/reg','RegistroController');
+	Route::get('/reg/{id}/delete',[
+		'uses'=>'RegistroController@destroy',
+		'as'=>'reg.destroy'
+	]);
 });
 
 Route::group([],function(){

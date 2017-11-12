@@ -1,0 +1,444 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"i",
+				"identida\tproperty"
+			],
+			[
+				"fi",
+				"file_to_post\tparameter"
+			],
+			[
+				"Ini",
+				"InicioService\talias"
+			],
+			[
+				"p",
+				"publicacion\tscript"
+			],
+			[
+				"pu",
+				"public_to_post\tparameter"
+			],
+			[
+				"str",
+				"string\tkeyword"
+			],
+			[
+				"b",
+				"bottom"
+			],
+			[
+				"ro",
+				"router\tproperty"
+			],
+			[
+				"rout",
+				"router\texternal module name"
+			],
+			[
+				"a",
+				"a\tTag"
+			],
+			[
+				"rg",
+				"rgba()"
+			],
+			[
+				"padding",
+				"padding-left"
+			],
+			[
+				"m",
+				"margin-left"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"s",
+				"status\tproperty"
+			],
+			[
+				"con",
+				"Console\tinterface"
+			],
+			[
+				"l",
+				"log\tproperty"
+			],
+			[
+				"lo",
+				"LoginService\talias"
+			],
+			[
+				"log",
+				"LoginService\talias"
+			],
+			[
+				"ret",
+				"return\tkeyword"
+			],
+			[
+				"sta",
+				"status\tvar"
+			],
+			[
+				"n",
+				"nCuenta\tproperty"
+			],
+			[
+				"res",
+				"Response\tparameter"
+			],
+			[
+				"Log",
+				"LoginService\talias"
+			],
+			[
+				"pr",
+				"private\tkeyword"
+			],
+			[
+				"Lo",
+				"LoginService\talias"
+			],
+			[
+				"pro",
+				"providers\tproperty"
+			],
+			[
+				"pa",
+				"params\tlet"
+			],
+			[
+				"cons",
+				"console\tvar"
+			],
+			[
+				"Regis",
+				"RegistroService\talias"
+			],
+			[
+				"clas",
+				"class\tkeyword"
+			],
+			[
+				"impo",
+				"import\tkeyword"
+			],
+			[
+				"imp",
+				"import\tkeyword"
+			],
+			[
+				"expo",
+				"exports\tvar"
+			],
+			[
+				"fr",
+				"from\tkeyword"
+			],
+			[
+				"cls",
+				"class\tclass …"
+			],
+			[
+				"r",
+				"rgba()"
+			],
+			[
+				"ma",
+				"margin-left"
+			],
+			[
+				"w",
+				"width"
+			],
+			[
+				"j",
+				"jquery"
+			],
+			[
+				"lin",
+				"links\tlink - stylesheet"
+			],
+			[
+				"hr",
+				"href\tAttr"
+			],
+			[
+				"C",
+				"CSS\tinterface"
+			],
+			[
+				"in",
+				"input\tTag"
+			],
+			[
+				"di",
+				"div\tTag"
+			],
+			[
+				"bo",
+				"bootstrap-3"
+			],
+			[
+				"Ba",
+				"BarraComponent"
+			],
+			[
+				"Er",
+				"Error404Component"
+			],
+			[
+				"L",
+				"LoginComponent"
+			],
+			[
+				"app",
+				"AppComponent"
+			],
+			[
+				"Reg",
+				"RegistroComponent"
+			],
+			[
+				"Perfi",
+				"PerfilComponent"
+			],
+			[
+				"Men",
+				"MensajesComponent"
+			],
+			[
+				"c",
+				"component"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "Package Control: ",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 484.0
+	},
+	"console":
+	{
+		"height": 69.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/laragon/www/Reciclando-Mexico"
+	],
+	"file_history":
+	[
+		"/C/angularp/app-prueba/src/app/Components/Inicio/inicio.component.html",
+		"/C/angularp/app-prueba/src/app/services/inicio.service.ts",
+		"/C/angularp/app-prueba/src/app/Components/Inicio/inicio.component.ts",
+		"/C/angularp/app-prueba/src/app/services/foto.service.ts",
+		"/C/angularp/app-prueba/src/app/models/fotos.ts",
+		"/C/angularp/app-prueba/src/app/Components/Perfil/perfil.component.html",
+		"/C/angularp/app-prueba/src/app/app.component.ts",
+		"/C/angularp/app-prueba/src/app/Components/Login/login.component.html",
+		"/C/angularp/app-prueba/src/app/Components/Login/login.component.ts",
+		"/C/angularp/app-prueba/src/app/models/comentarios.ts",
+		"/C/angularp/app-prueba/src/app/models/publicacion.ts",
+		"/C/angularp/app-prueba/src/app/models/user.ts",
+		"/C/angularp/app-prueba/src/index.html",
+		"/C/angularp/app-prueba/src/styles.css",
+		"/C/angularp/app-prueba/src/app/Components/Barra/barra.component.ts",
+		"/C/angularp/app-prueba/src/app/Components/Barra/barra.component.html",
+		"/C/angularp/app-prueba/src/app/Components/Perfil/perfil.component.ts",
+		"/C/angularp/app-prueba/src/app/app.component.html",
+		"/C/angularp/app-prueba/src/app/services/login.service.ts",
+		"/C/angularp/app-prueba/src/app/Components/Registro/registro.component.html",
+		"/C/angularp/app-prueba/src/app/services/registro.service.ts",
+		"/C/angularp/app-prueba/src/app/Components/Registro/registro.component.ts",
+		"/C/angularp/app-prueba/src/app/services/global.ts",
+		"/C/angularp/app-prueba/src/app/app.module.ts",
+		"/C/angularp/app-prueba/.angular-cli.json",
+		"/C/nod/api-rest/index.js",
+		"/C/angularp/app-prueba/src/app/Components/Mensajes/mensajes.component.ts",
+		"/C/angularp/app-prueba/src/app/Components/Error404/error404.component.ts",
+		"/C/angularp/app-prueba/package.json",
+		"/C/Users/Manuel/AppData/Roaming/Sublime Text 3/Packages/Terminal/Default (Windows).sublime-keymap",
+		"/C/Users/Manuel/AppData/Roaming/Sublime Text 3/Packages/User/Terminal (Windows).sublime-settings",
+		"/C/Users/Manuel/AppData/Roaming/Sublime Text 3/Packages/User/Terminal.sublime-settings",
+		"/C/Users/Manuel/AppData/Roaming/Sublime Text 3/Packages/Terminal/Terminal.sublime-settings",
+		"/C/angularp/app-prueba/src/ExtraMario/css/styleIni.css",
+		"/C/angularp/app-prueba/src/app/ExtraMario/php/index.html",
+		"/C/angularp/app-prueba/src/app/app.routing.ts",
+		"/C/angularp/app-prueba/src/app/Components/Erro404/error404.component.ts",
+		"/C/angularp/app-prueba/src/app/Components/Registro/registro.component.css",
+		"/C/angularp/app-prueba/src/app/Components/Mensajes/mensajes.component.css",
+		"/C/angularp/app-prueba/src/app/Components/Login/login.component.css",
+		"/C/angularp/app-prueba/src/app/Components/Inicio/inicio.component.css",
+		"/C/angularp/app-prueba/src/app/Components/RedICO/Inicio.component.ts",
+		"/C/angularp/app-prueba/src/app/Componentes/RedICO/redICO.component.ts"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 105.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"identida"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 21.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.CSS Extended Completions":
+	{
+		"height": 0.0
+	},
+	"output.doc":
+	{
+		"height": 0.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "RM-Laravel.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 211.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
