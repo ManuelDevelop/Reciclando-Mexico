@@ -6,6 +6,8 @@
 
 	{!! Form::open(['route'=>'reg.store','files'=>'true','method'=>'POST']) !!}
 
+	{{ csrf_field() }}
+
 	<div class="form-group">
 		{!! Form::label('name','kilometros') !!}
 		{!! Form::number('kilometros',0,['class'=>'form-control','required']) !!}

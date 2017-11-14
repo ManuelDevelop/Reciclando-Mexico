@@ -6,6 +6,8 @@
 
 	{!! Form::open(['route'=>['reg.update',$reg],'files'=>'true','method'=>'PUT']) !!}
 
+	{{ csrf_field() }}
+
 	<div class="form-group">
 		{!! Form::label('name','kilometros') !!}
 		{!! Form::number('kilometros',$reg->kilometros,['class'=>'form-control','required']) !!}

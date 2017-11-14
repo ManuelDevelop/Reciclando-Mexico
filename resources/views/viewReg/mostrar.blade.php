@@ -21,7 +21,7 @@
 					<td> {{ $reg->gasolina }} </td>
 					<td> {{ $reg->kilos }} </td>
 					<td> 
-						<img src="{{ Storage::disk('public')->url($reg->foto->picture) }}" class="thumbnail img-thumbnail img-responsive" width="100px">
+						<a href="{{ route('fot.show',$reg->foto->id) }}"><img src="{{ Storage::disk('public')->url($reg->foto->picture) }}" a class="thumbnail img-thumbnail img-responsive" width="100px"></a>
 					</td>
 					<td>
 						<a href="{{ route('reg.edit',$reg->id) }}" class="btn btn-warning glyphicon glyphicon-pencil"></a>

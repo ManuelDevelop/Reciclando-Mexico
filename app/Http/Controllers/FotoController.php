@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use App\Foto;
+use Illuminate\Support\Facades\Storage;
+
 
 class FotoController extends Controller
 {
@@ -48,7 +50,14 @@ class FotoController extends Controller
      */
     public function show($id)
     {
-        //
+        $foto=Foto::find($id);
+        if(!$foto){
+            Flash::success("No existe la foto");
+            return redirect()->route('reg.index');
+        }
+        else{
+            return view('verfoto')->with('foto',$foto->picture);  
+        }
     }
 
     /**
