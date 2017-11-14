@@ -4,6 +4,38 @@
 		"selected_items":
 		[
 			[
+				"re",
+				"registros"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"A",
+				"Auth〔class〕"
+			],
+			[
+				"S",
+				"Support〔namespace〕"
+			],
+			[
+				"kilo",
+				"kilos"
+			],
+			[
+				"req",
+				"$request〔variable〕"
+			],
+			[
+				"ki",
+				"kilos"
+			],
+			[
+				"ret",
+				"return"
+			],
+			[
 				"i",
 				"identida\tproperty"
 			],
@@ -78,10 +110,6 @@
 			[
 				"log",
 				"LoginService\talias"
-			],
-			[
-				"ret",
-				"return\tkeyword"
 			],
 			[
 				"sta",
@@ -264,6 +292,13 @@
 	],
 	"file_history":
 	[
+		"/C/laragon/www/Reciclando-Mexico/resources/views/viewReg/mostrar.blade.php",
+		"/C/laragon/www/Reciclando-Mexico/app/Http/Controllers/Auth/RegisterController.php",
+		"/C/laragon/www/Reciclando-Mexico/app/Http/Controllers/Auth/LoginController.php",
+		"/C/laragon/www/Reciclando-Mexico/routes/web.php",
+		"/C/laragon/www/Reciclando-Mexico/app/Http/Controllers/RegistroController.php",
+		"/C/laragon/www/Reciclando-Mexico/resources/views/viewReg/editar.blade.php",
+		"/C/laragon/www/Reciclando-Mexico/resources/views/viewReg/editar.blade.ts",
 		"/C/angularp/app-prueba/src/app/Components/Inicio/inicio.component.html",
 		"/C/angularp/app-prueba/src/app/services/inicio.service.ts",
 		"/C/angularp/app-prueba/src/app/Components/Inicio/inicio.component.ts",
@@ -349,7 +384,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 21.0
+		"height": 22.0
 	},
 	"input":
 	{
@@ -436,7 +471,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 211.0,
+	"side_bar_width": 355.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

@@ -10,8 +10,8 @@ class Registro extends Model
     protected $fillable=array('kilometros','gasolina','kilos','login_id');
     protected $hidden=['created_at','updated_at'];
 
-    public function login(){
-    	return $this->belongsTo('App\Login');
+    public function user(){
+    	return $this->belongsTo('App\User');
     }
 
     public function foto(){

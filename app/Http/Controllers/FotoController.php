@@ -16,7 +16,7 @@ class FotoController extends Controller
      */
     public function index()
     {
-        return response()->json(Foto::all(),201);
+        //
     }
 
     /**
@@ -26,7 +26,7 @@ class FotoController extends Controller
      */
     public function create()
     {
-        //
+        return view('viewFot.crear');
     }
 
     /**
@@ -37,16 +37,7 @@ class FotoController extends Controller
      */
     public function store(Request $request)
     {
-        $picture=$request->input('picture');
-        $registro_id=$request->input('registro_id');
-
-        if(!$picture || !$registro_id){
-            return response()->json(['errors'=>array(['code'=>422,'message'=>'Faltan datos'])],422);
-        }
-        else{
-            $foto=Foto::create($request->all());
-            return response()->json(['status'=>'ok','data'=>$foto],201);
-        }
+        
     }
 
     /**
@@ -57,13 +48,7 @@ class FotoController extends Controller
      */
     public function show($id)
     {
-        $foto=Foto::find($id);
-        if(!$foto){
-            return response()->json(['errors'=>array(['code'=>404,'message'=>'No se encuentra'])],404);
-        }
-        else{
-            return response()->json(['status'=>'ok','data'=>$foto],200);
-        }
+        //
     }
 
     /**
@@ -97,13 +82,6 @@ class FotoController extends Controller
      */
     public function destroy($id)
     {
-        $foto=Foto::find($id);
-        if(!$foto){
-            return response()->json(['errors'=>array(['code'=>404,'message'=>'No se encuentra'])],404);
-        }
-        else{
-            $foto->delete();
-            return response()->json(['status'=>'ok','data'=>$foto,'message'=>'se elimino el registro'],204);
-        }
+        //
     }
 }

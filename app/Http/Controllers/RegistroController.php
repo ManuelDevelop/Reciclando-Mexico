@@ -6,8 +6,10 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use App\Registro;
+use App\Foto;
 use Laracasts\Flash\Flash;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class RegistroController extends Controller
 {
@@ -19,7 +21,7 @@ class RegistroController extends Controller
     public function index()
     {
         $id=Auth::user()->id;
-        $registros=Registro::where("login_id","=",$id)->orderBy('id','ASC')->paginate(10);
+        $registros=Registro::where("login_id","=",$id)->orderBy('id','DSC')->paginate(10);
         return view('viewReg.mostrar')->with('listreg',$registros);
     }
 
@@ -44,14 +46,25 @@ class RegistroController extends Controller
         $kilometros=$request->input('kilometros');
         $gasolina=$request->input('gasolina');
         $kilos=$request->input('kilos');
-        if(!$kilometros || !$gasolina || !$kilos){
+        $file=$request->file('image');
+
+
+        if(!$kilometros || !$gasolina || !$kilos || !$request->hasFile('image')){
             Flash::warning('Faltan Datos');
-            return redirect()->route('reg.index');
+            return redirect()->route('reg.create');
         }
         else{
             $registro=new Registro($request->all());
             $registro->login_id=Auth::user()->id;
             $registro->save();
+            $id=Auth::user()->id;
+            $reg=Registro::where("login_id","=",$id)->orderBy('id','DSC')->paginate(1);
+            $r=$reg[0];
+            $image=$file->store('IMG','public');
+            $foto=new Foto();
+            $foto->picture=$image;
+            $foto->registro_id=$r->id;
+            $foto->save();
             Flash::success("se creo el nuevo registro");
             return redirect()->route('reg.index');
         }
@@ -105,10 +118,29 @@ class RegistroController extends Controller
             Flash::warning("Ese registro no existe");
         }
         else{
-            Flash::success("Actualizacion del registro Exitosa");
-            $reg->fill($request->all());
-            $reg->save();
-            return redirect()->route('reg.index');
+            if($request->hasFile('image')){
+                Flash::success("Actualizacion del registro Exitosa");
+                $foto=$reg->foto;
+                Storage::disk('public')->delete($foto->picture);
+                $foto->delete();
+
+                $reg->fill($request->all());
+                $reg->save();
+
+                $file=$request->file('image');
+                $image=$file->store('IMG','public');
+                $foto=new Foto();
+                $foto->picture=$image;
+                $foto->registro_id=$reg->id;
+                $foto->save();
+                return redirect()->route('reg.index');
+            }
+            else{
+                Flash::success("Actualizacion del registro Exitosa");
+                $reg->fill($request->all());
+                $reg->save();
+                return redirect()->route('reg.index');
+            }
         }
     }
 
@@ -125,6 +157,9 @@ class RegistroController extends Controller
             Flash::warning("Ese registro no existe");
         }
         else{
+            Storage::disk('public')->delete($registro->foto->picture);
+            $foto=$registro->foto;
+            $foto->delete();
             $registro->delete();
             Flash::success('El registro se elimino de Manera Exitosa');
             return redirect()->route('reg.index');

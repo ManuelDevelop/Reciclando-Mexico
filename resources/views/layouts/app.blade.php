@@ -11,7 +11,7 @@
     <title>@yield('title','Reciclando Mexico')</title>
 
     <!-- Styles -->
-    <link href="{{ asset('plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" media="screen">
 </head>
 <body>
     <div id="app">
@@ -63,9 +63,10 @@
                 </div>
             </div>
         </nav>
-
-        @include('flash::message') <!--Agregamos el mensaje de flash-->
-        @yield('content') <!--indicamos que sedera la vista o el contenido de -->
+        <div class="container-fluid">
+            @include('flash::message') <!--Agregamos el mensaje de flash-->
+            @yield('content') <!--indicamos que sedera la vista o el contenido de -->
+        </div>
     </div>
 
     <div class="navbar-fixed-bottom">
@@ -74,5 +75,12 @@
     <!-- Scripts -->
     <script type="text/javascript" src="{{ asset('plugins/jquery/jquery-3.2.1.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('plugins/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script>
+        var nua = navigator.userAgent;
+        var isAndroid = (nua.indexOf('Mozilla/5.0') > -1 && nua.indexOf('Android')> -1 && nua.indexOf('AppleWebKit') > -1 && nua.indexOf('Chrome') === 1);
+        if(isAndroid){
+            $('select.form-control').removeClass('form-control').css('width','100%');
+        }
+    </script>
     </body>
 </html>

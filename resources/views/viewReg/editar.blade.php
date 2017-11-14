@@ -4,7 +4,7 @@
 
 @section('content')
 
-	{!! Form::open(['route'=>['reg.update',$reg],'method'=>'PUT']) !!}
+	{!! Form::open(['route'=>['reg.update',$reg],'files'=>'true','method'=>'PUT']) !!}
 
 	<div class="form-group">
 		{!! Form::label('name','kilometros') !!}
@@ -20,11 +20,26 @@
 		{!! Form::label('name','kilos') !!}
 		{!! Form::number('kilos',$reg->kilos,['class'=>'form-control','required']) !!}
 	</div>
+
+	<img class="thumbnail img-thumbnail img-responsive" src="{{ Storage::disk('public')->url($reg->foto->picture) }}">
 	
 	<div class="form-group">
-		{!! Form::submit('Crear',['class'=>'btn btn-primary']) !!}	
+		{!! Form::label('image','Foto') !!}
+		{!! Form::file('image') !!}
 	</div>
-	
+
+	<hr>
+
+	<div class="form-group">
+		{!! Form::submit('Actualizar',['class'=>'btn btn-primary btn-lg btn-block']) !!}	
+	</div>
+
+	{!! Form::close() !!}
+
+	{!! Form::open(['route'=>['reg.index'],'method'=>'GET']) !!}
+	<div class="form-group">
+		{!! Form::submit('Cancelar',['class'=>'btn btn-danger btn-lg btn-block']) !!}	
+	</div>
 	{!! Form::close() !!}
 
 @endsection

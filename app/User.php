@@ -26,4 +26,10 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function registro(){
+        return $this->hasMany(
+            'App\Registro','login_id', 'id'
+        );
+    }
 }

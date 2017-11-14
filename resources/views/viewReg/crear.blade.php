@@ -4,7 +4,7 @@
 
 @section('content')
 
-	{!! Form::open(['route'=>'reg.store','method'=>'POST']) !!}
+	{!! Form::open(['route'=>'reg.store','files'=>'true','method'=>'POST']) !!}
 
 	<div class="form-group">
 		{!! Form::label('name','kilometros') !!}
@@ -20,11 +20,24 @@
 		{!! Form::label('name','kilos') !!}
 		{!! Form::number('kilos',0,['class'=>'form-control','required']) !!}
 	</div>
-	
+
 	<div class="form-group">
-		{!! Form::submit('Crear',['class'=>'btn btn-primary']) !!}	
+		{!! Form::label('image','Foto') !!}
+		{!! Form::file('image') !!}
 	</div>
 	
+	<hr>
+
+	<div class="form-group">
+		{!! Form::submit('Crear',['class'=>'btn btn-primary btn-lg btn-block']) !!}	
+	</div>
+	
+	{!! Form::close() !!}
+
+	{!! Form::open(['route'=>['reg.index'],'method'=>'GET']) !!}
+	<div class="form-group">
+		{!! Form::submit('Cancelar',['class'=>'btn btn-danger btn-lg btn-block']) !!}	
+	</div>
 	{!! Form::close() !!}
 
 @endsection
