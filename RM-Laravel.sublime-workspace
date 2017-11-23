@@ -4,8 +4,56 @@
 		"selected_items":
 		[
 			[
+				"S",
+				"Storage〔class〕"
+			],
+			[
 				"re",
 				"registros"
+			],
+			[
+				"F",
+				"file〔function〕"
+			],
+			[
+				"Re",
+				"Request"
+			],
+			[
+				"E",
+				"Exitosa"
+			],
+			[
+				"pi",
+				"picture\t<picture>"
+			],
+			[
+				"t",
+				"th\t<th>"
+			],
+			[
+				"fo",
+				"foreach\tforeach …"
+			],
+			[
+				"fin",
+				"find"
+			],
+			[
+				"name",
+				"$namefoto〔variable〕"
+			],
+			[
+				"pat",
+				"$path〔variable〕"
+			],
+			[
+				"sub",
+				"submit"
+			],
+			[
+				"form",
+				"form-group"
 			],
 			[
 				"fun",
@@ -14,10 +62,6 @@
 			[
 				"A",
 				"Auth〔class〕"
-			],
-			[
-				"S",
-				"Support〔namespace〕"
 			],
 			[
 				"kilo",
@@ -288,16 +332,25 @@
 	},
 	"expanded_folders":
 	[
-		"/C/laragon/www/Reciclando-Mexico"
 	],
 	"file_history":
 	[
+		"/C/laragon/www/Reciclando-Mexico/.env",
+		"/C/laragon/www/Reciclando-Mexico/resources/views/viewReg/editar.blade.php",
+		"/C/laragon/www/Reciclando-Mexico/resources/views/viewReg/crear.blade.php",
+		"/C/laragon/www/Reciclando-Mexico/app/Http/Controllers/FotoController.php",
 		"/C/laragon/www/Reciclando-Mexico/resources/views/viewReg/mostrar.blade.php",
+		"/C/laragon/www/Reciclando-Mexico/resources/views/verfoto.blade.php",
+		"/C/laragon/www/Reciclando-Mexico/app/Http/Controllers/RegistroController.php",
+		"/C/laragon/www/Reciclando-Mexico/resources/views/home.blade.php",
+		"/C/laragon/www/Reciclando-Mexico/resources/views/layouts/app.blade.php",
+		"/C/laragon/www/Reciclando-Mexico/resources/views/viewFot/crear.blade.php",
+		"/C/laragon/www/Reciclando-Mexico/app/User.php",
+		"/C/laragon/www/Reciclando-Mexico/routes/web.php",
+		"/C/laragon/www/Reciclando-Mexico/app/Registro.php",
+		"/C/laragon/www/Reciclando-Mexico/app/Foto.php",
 		"/C/laragon/www/Reciclando-Mexico/app/Http/Controllers/Auth/RegisterController.php",
 		"/C/laragon/www/Reciclando-Mexico/app/Http/Controllers/Auth/LoginController.php",
-		"/C/laragon/www/Reciclando-Mexico/routes/web.php",
-		"/C/laragon/www/Reciclando-Mexico/app/Http/Controllers/RegistroController.php",
-		"/C/laragon/www/Reciclando-Mexico/resources/views/viewReg/editar.blade.php",
 		"/C/laragon/www/Reciclando-Mexico/resources/views/viewReg/editar.blade.ts",
 		"/C/angularp/app-prueba/src/app/Components/Inicio/inicio.component.html",
 		"/C/angularp/app-prueba/src/app/services/inicio.service.ts",
@@ -471,7 +524,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 355.0,
+	"side_bar_width": 197.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
